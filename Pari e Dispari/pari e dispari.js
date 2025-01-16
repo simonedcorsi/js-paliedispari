@@ -6,10 +6,27 @@ function numeriRandom(min,max) {
 }
 
 function pariODispari(x) {
+
     if (x % 2 === 0) {
+        risultatoPariDispari = "pari"
         return console.log(`Il numero scelto: ${x} è pari`)
     } else {
+        risultatoPariDispari = "dispari"
         return console.log(`Il numero scelto: ${x} è  dispari`)
     }
 
+}
+
+let sceltaUtente = prompt( "Scegli fra la parola Pari o Dispari").toLowerCase()
+let numeroUtente = parseInt(prompt("inserisci un numero da 1 a 5"))
+let numeroComputer = numeriRandom(1, 5)
+let sommaNumeri = numeroUtente + numeroComputer
+let risultatoPariDispari = ""
+
+pariODispari(sommaNumeri)
+
+if( sceltaUtente === risultatoPariDispari){
+    console.log("complimenti hai vinto")
+}else{
+    console.log("hai perso")
 }
